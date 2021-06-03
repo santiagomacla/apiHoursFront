@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+mat-card {
+  width: 500px;
+}
+
+.container-table {
+  width: 60%;
+  margin: 0 auto;
+}

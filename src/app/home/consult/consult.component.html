@@ -1,0 +1,47 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <h1>Consultar</h1>
+      <hr />
+
+      <form class="form" autocomplete="off" [formGroup]="consultForm">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="fill">
+              <mat-label>Id del técnico:</mat-label>
+              <input matInput formControlName="tecnic" />
+            </mat-form-field>
+            <span *ngIf="validarCampo('tecnic')" class="text-danger form-text">
+              Campo requerido no puede estar vacío
+            </span>
+          </div>
+          <div class="col-6">
+            <mat-form-field appearance="fill">
+              <mat-label>Número de la semana:</mat-label>
+              <input matInput type="number" formControlName="sem" />
+            </mat-form-field>
+            <span *ngIf="validarCampo('sem')" class="form-text text-danger"
+              >Debe de ser mayor a 0</span
+            >
+          </div>
+          <div class="col-12 d-flex justify-content-end">
+            <button
+              mat-raised-button
+              color="primary"
+              class="me-3"
+              (click)="consultar()"
+            >
+              Consultar
+            </button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div *ngIf="data !== undefined" class="container-table mt-4">
+  <div class="table-content">
+    <app-table [data]="data"></app-table>
+  </div>
+</div>

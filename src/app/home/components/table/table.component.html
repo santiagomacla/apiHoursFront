@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-content>
+    <h3>Horas Facturadas</h3>
+    <hr />
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código Tecnico</th>
+          <th>Horas Normales</th>
+          <th>Horas Nocturnas</th>
+          <th>Horas Dominicales</th>
+          <th>Horas E. Normales</th>
+          <th>Horas E. Nocturnas</th>
+          <th>Horas E. Dominicales</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ data.idTecnic }}</td>
+          <td>{{ data.horasNomales }}</td>
+          <td>{{ data.horasNocturnas }}</td>
+          <td>{{ data.horasDomin }}</td>
+          <td>{{ data.horasENormales }}</td>
+          <td>{{ data.horaENocturn }}</td>
+          <td>{{ data.horasEDomin }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
